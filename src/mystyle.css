@@ -1,0 +1,62 @@
+.purple{
+	
+	background:#7b1fa2;
+	
+	/*https://mui.com/material-ui/customization/color/ */
+	
+}
+
+
+.re{
+	color:#f8bbd0;
+	
+}
+
+.re2{
+background-color: #f8bbd0;
+
+}
+
+.my-background-element {
+  background-image: url('./images/krishna.jpg'); /* Note the leading slash */
+  height: 100vh;
+  background-size: cover;
+}
+
+.pic{
+
+ /* background-image: url('./images/krishna.jpg'); /* Note the leading slash */
+  background-color: #76ff03;
+
+  /*
+  min-height: 565px;
+min-width: 100%;
+*/
+max-height: 200vh;
+max-width: 100%;
+ background-size: cover;
+
+  /*background-image: url('/background.png') */
+  background-repeat: no-repeat; 
+
+
+}
+
+
+.pic2{
+
+
+  display: flex;
+  justify-content: center;
+  color: red;
+
+ /* background-image: url('./images/krishna.jpg'); /* Note the leading slash */
+  background-color: #fc05ef;
+height: 100%;
+width: 100%;
+  /*background-image: url('/background.png') */
+/* background-size: cover; */
+  background-repeat: no-repeat; 
+
+
+}
