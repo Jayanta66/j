@@ -5,7 +5,7 @@ import './mystyle.css'
 import backgroundImage from './images/krishna.jpg';
 
 //http://72.60.101.202:8081/api/items
-const API = 'http://72.60.101.202:8081/api/items'
+const API = 'https://72.60.101.202:8081/api/items'
 
 //const API = 'http://localhost:8080/api/items'
 
@@ -68,8 +68,8 @@ export default function App(){
   function edit(item){
     setEditingId(item.id)
     setForm({name:item.name, details:item.details || ''})
-    setImagePreview(item.imagePath ? `http://72.60.101.202:8081/api/items/files/${item.imagePath}` : null)
-    setVideoPreview(item.videoPath ? `http://72.60.101.202:8081/api/items/files/${item.videoPath}` : null)
+    setImagePreview(item.imagePath ? `https://72.60.101.202:8081/api/items/files/${item.imagePath}` : null)
+    setVideoPreview(item.videoPath ? `https://72.60.101.202:8081/api/items/files/${item.videoPath}` : null)
   }
 
   return (
