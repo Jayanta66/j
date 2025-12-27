@@ -1,14 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
-import './mystyle.css'
-import backgroundImage from './images/krishna.jpg';
-
-//http://72.60.101.202:8081/api/items
-const API = 'https://72.60.101.202:8081/api/items'
-
-//const API = 'http://localhost:8080/api/items'
-
+//import './mystyle.css'
+const API = 'http://72.60.101.202:8080/api/items'
 
 export default function App(){
   const [items, setItems] = useState([])
@@ -68,8 +61,8 @@ export default function App(){
   function edit(item){
     setEditingId(item.id)
     setForm({name:item.name, details:item.details || ''})
-    setImagePreview(item.imagePath ? `https://72.60.101.202:8081/api/items/files/${item.imagePath}` : null)
-    setVideoPreview(item.videoPath ? `https://72.60.101.202:8081/api/items/files/${item.videoPath}` : null)
+    setImagePreview(item.imagePath ? `http://72.60.101.202:8080/api/items/${item.imagePath}` : null)
+    setVideoPreview(item.videoPath ? `http://72.60.101.202:8080/api/items/${item.videoPath}` : null)
   }
 
   return (
@@ -148,11 +141,10 @@ export default function App(){
         <div  key={it.id} class="card mt-3 mb-3 ">
           <h3 class="card-title">{it.name}</h3>
           <p class="card-text mb-3">{it.details}</p>
-
-          <img class="container text-center mt-2" src={`http://72.60.101.202:8081/api/items/files/${it.imagePath}`} alt="" style={{ maxWidth:'30%'}} />
+          <img class="container text-center mt-2" src={`http://72.60.101.202:8080/api/items/files/${it.imagePath}`} alt="" style={{ maxWidth:'30%'}} />
       
           <div class="container text-center mt-2">
-            <video controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} style={{maxWidth:'30%'}} src={`http://72.60.101.202:8081/api/items/files/${it.videoPath}`}></video></div>
+            <video controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} style={{maxWidth:'30%'}} src={`http://72.60.101.202:8080/api/items/files/${it.videoPath}`}></video></div>
          
           <div class="container text-center">
             <button class="btn btn-primary"  onClick={()=>edit(it)}>Edit</button>

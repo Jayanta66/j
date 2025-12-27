@@ -21,5 +21,7 @@
   },
   "devDependencies": {
     "vite": "^7.2.7"
-  }
+  },
+  "proxy": "http://api.insecure-service.com"
+
 }
