@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-//import './mystyle.css'
-const API = 'http://72.60.101.202:8080/api/items'
-
+import './mystyle.css'
+//const API = 'http://72.60.101.202:8080/api/items'
+const API='http://72.60.101.202:8080/api/items'
 export default function App(){
   const [items, setItems] = useState([])
   const [form, setForm] = useState({name:'', details:''})
@@ -144,7 +144,7 @@ export default function App(){
           <img class="container text-center mt-2" src={`http://72.60.101.202:8080/api/items/files/${it.imagePath}`} alt="" style={{ maxWidth:'30%'}} />
       
           <div class="container text-center mt-2">
-            <video controls controlsList="nodownload" onContextMenu={(e) => e.preventDefault()} style={{maxWidth:'30%'}} src={`http://72.60.101.202:8080/api/items/files/${it.videoPath}`}></video></div>
+            <video controls  controlsList="nodownload" onContextMenu={(e) => e.preventDefault()}  style={{maxWidth:'30%'}} src={`http://72.60.101.202:8080/api/items/files/${it.videoPath}`}></video></div>
          
           <div class="container text-center">
             <button class="btn btn-primary"  onClick={()=>edit(it)}>Edit</button>
